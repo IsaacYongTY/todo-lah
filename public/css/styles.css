@@ -18,3 +18,7 @@
 .title {
     overflow-y: scroll;
 }
+
+.title::-webkit-scrollbar {
+    display:none;
+}

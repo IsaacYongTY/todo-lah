@@ -15,7 +15,6 @@ router.post("/todo", async(req, res) => {
 router.delete("/todo", async (req, res) => {
     try {
         let index = req.body.index
-        console.log(index)
         mockData.todos.splice(index, 1)
         res.redirect("/todo")
     } catch(e) {
