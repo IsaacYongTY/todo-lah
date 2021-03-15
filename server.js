@@ -13,6 +13,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
 app.use("/", require("./routes/user.route"))
+app.use("/", require("./routes/todo.route"))
 
 // app.use(session( {
 //     secret: process.env.SECRET,
