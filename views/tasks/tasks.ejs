@@ -14,7 +14,7 @@
     <div class = "row">
         <% mockData.todos.forEach((el, idx) => { %>
         <% if (!el.isCompleted) { %>
-        <div class = "col-5 m-4 d-flex task" style = "background-color: #387BE0" >
+        <div class = "col-5 col-xs-12 m-4 d-flex task" style = "background-color: #387BE0" >
             <div style ="width: 93%; height: 200px">
                 <h5 class = "mt-3 title" style="color: white; height: 50px">ToDo #<%= idx + 1%>: <%= el.title %></h5>
                 <div class = "bg-white mb-2 desc" style="height: 60%">
@@ -33,7 +33,7 @@
             </div>
         </div>
         <% } else { %>
-                <div class = "col-5 m-4 d-flex task" style = "background-color: #A0E038" >
+                <div class = "col-5 m-4 col-xs-12 d-flex task" style = "background-color: #A0E038" >
                     <div style ="width: 93%; height: 200px">
                         <h5 class = "mt-3 title" style="color: white; height: 50px">ToDo #<%= idx + 1%>: <%= el.title %></h5>
                         <div class = "bg-white mb-2 desc" style="height: 60%">
