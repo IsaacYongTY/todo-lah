@@ -14,17 +14,17 @@ app.use(methodOverride('_method'))
 
 app.use("/", require("./routes/user.route"))
 
-app.use(session( {
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl : process.env.DB})
-}))
+// app.use(session( {
+//     secret: process.env.SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//     store: MongoStore.create({ mongoUrl : process.env.DB})
+// }))
 
 // app.use(passport.initialize())
 // app.use(passport.session())
 
-
+app.use(express.static("public"))
 
 app.use("/", require("./routes/user.route"))
 
