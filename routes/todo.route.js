@@ -1,10 +1,7 @@
 const router = require('express').Router()
 const User = require('../models/user.model')
-<<<<<<< HEAD
 const mockData = require('../lib/mockData')
-=======
-const mockData = require("../lib/mockData")
->>>>>>> e2af23e430db3c1e859ea78b25d6c06af5679afc
+
 
 router.post("/todo", (req, res) => {
     try{
