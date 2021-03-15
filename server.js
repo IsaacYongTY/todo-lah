@@ -12,7 +12,7 @@ app.use(require('express-ejs-layouts'))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
-
+app.use("/", require("./routes/user.route"))
 
 app.use(session( {
     secret: process.env.SECRET,

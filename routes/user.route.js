@@ -1,6 +1,11 @@
 const router = require('express').Router()
 const User = require('../models/user.model')
 
+router.get("/", (req, res) => {
+    res.render("auth/signin")
+})
+
+//Put this in other route, the default / is for signin currently
 router.get('/', async(req, res) => {
     try{
         // console.log("??")
@@ -25,8 +30,5 @@ router.post('/users/:id', async(req, res) => {
         console.log(e)
     }
 })
-
-
-
 
 module.exports = router
