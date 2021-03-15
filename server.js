@@ -12,22 +12,30 @@ app.set('view engine', 'ejs')
 app.use(require('express-ejs-layouts'))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
-
-app.use("/", require("./routes/user.route"))
-
-// app.use(session( {
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: true,
-//     store: MongoStore.create({ mongoUrl : process.env.DB})
-// }))
-
-app.use(passport.initialize())
-
-
 app.use(express.static("public"))
 
+
+
+
+app.use(session( {
+    secret: process.env.SECRET,
+    resave: true,
+    saveUninitialized: true,
+    store: MongoStore.create({ mongoUrl : process.env.DB})
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
 app.use("/", require("./routes/user.route"))
+
+app.use(function(req,res,next) {
+    res.locals.currentUser = req.user
+    next()
+})
+
+
+
 
 
 
