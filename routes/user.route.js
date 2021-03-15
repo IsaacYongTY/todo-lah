@@ -5,16 +5,20 @@ router.get("/", (req, res) => {
     res.render("auth/signin")
 })
 
-//Put this in other route, the default / is for signin currently
-router.get('/', async(req, res) => {
-    try{
-        // console.log("??")
-        // let user = await User.findById(req.user)
-        res.redirect("/")
-    }catch(e){
-
-    }
+router.get("/register", (req, res) => {
+    res.render("auth/signup")
 })
+
+//Put this in other route, the default / is for signin currently
+// router.get('/', async(req, res) => {
+//     try{
+//         // console.log("??")
+//         // let user = await User.findById(req.user)
+//         res.redirect("/")
+//     }catch(e){
+
+//     }
+// })
 
 router.post('/users/:id', async(req, res) => {
     try{
@@ -30,5 +34,6 @@ router.post('/users/:id', async(req, res) => {
         console.log(e)
     }
 })
+
 
 module.exports = router
