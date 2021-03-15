@@ -14,3 +14,7 @@
 .desc {
     overflow-y: scroll;
 }
+
+.title {
+    overflow-y: scroll;
+}
