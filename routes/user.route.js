@@ -10,7 +10,7 @@ router.get("/register", (req, res) => {
     res.render("auth/signup")
 })
 
-router.get("/tasks", (req, res) => {
+router.get("/todo", (req, res) => {
     res.render("tasks/tasks", {mockData})
 })
 
