@@ -1,6 +1,6 @@
 <div class = "container">
-    <form method = "Post" action = "">
-
+    <form method = "POST" action = "">
+        <% %>
         <div id = "createtask" style = "padding: 20px; background-color: lightgray; ">
             <h6 class = "mb-3">Welcome, <%= mockData.firstName%>!</h6>
             <input class = "form-control mb-3" name = "title" placeholder = "Add a task title and click 'Submit'. " />
@@ -22,8 +22,13 @@
                 </div>
             </div>
             <div>
+<<<<<<< HEAD
+                <form method = "POST", action = "?_method=DELETE">
+                    <button class = "btn btn-danger m-3">
+=======
                 <form method = "Post" action = "/todo?_method=DELETE">
                     <button name = "index" value =<%= idx%> class = "btn btn-danger m-3">
+>>>>>>> e2af23e430db3c1e859ea78b25d6c06af5679afc
                         <span>X</span>
                     </button>
                 </form>
@@ -41,8 +46,13 @@
                         </div>
                     </div>
                     <div>
+<<<<<<< HEAD
+                        <form method = "POST", action = "?_method=DELETE">
+                            <button class = "btn btn-danger m-3">
+=======
                         <form method = "Post" action = "/todo?_method=DELETE">
                             <button name = "index" value =<%= idx%> class = "btn btn-danger m-3">
+>>>>>>> e2af23e430db3c1e859ea78b25d6c06af5679afc
                                 <span>X</span>
                             </button>
                         </form>
