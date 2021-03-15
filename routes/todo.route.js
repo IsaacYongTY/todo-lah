@@ -1,11 +1,19 @@
 const router = require('express').Router()
 const User = require('../models/user.model')
+const mockData = require('../lib/mockData')
 
-router.post("/todo", async(req, res) => {
+router.post("/todo", (req, res) => {
     try{
-        let user = new User(req.body)
-        await user.save()
-        res.redirect("/")
+        let newTodo = {
+            title: req.body.title,
+            description: req.body.description,
+            isCompleted: false
+        }
+        console.log(newTodo)
+
+        // console.log(req.body)
+        mockData.todos.push(newTodo)
+        res.redirect(`/todo`)
     }catch(e){
         console.log(e)
     }

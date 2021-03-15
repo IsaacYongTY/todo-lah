@@ -1,6 +1,6 @@
 <div class = "container">
-    <form method = "Post" action = "">
-
+    <form method = "POST" action = "">
+        <% %>
         <div id = "createtask" style = "padding: 20px; background-color: lightgray; ">
             <h6 class = "mb-3">Welcome, <%= mockData.firstName%>!</h6>
             <input class = "form-control mb-3" name = "title" placeholder = "Add a task title and click 'Submit'. " />
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div>
-                <form method = "Post", action = "?_method=DELETE">
+                <form method = "POST", action = "?_method=DELETE">
                     <button class = "btn btn-danger m-3">
                         <span>X</span>
                     </button>
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div>
-                        <form method = "Post", action = "?_method=DELETE">
+                        <form method = "POST", action = "?_method=DELETE">
                             <button class = "btn btn-danger m-3">
                                 <span>X</span>
                             </button>
