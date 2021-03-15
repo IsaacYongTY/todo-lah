@@ -14,9 +14,6 @@ app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 app.use(express.static("public"))
 
-
-
-
 app.use(session( {
     secret: process.env.SECRET,
     resave: true,
@@ -28,15 +25,12 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use("/", require("./routes/user.route"))
+app.use("/", require("./routes/todo.route"))
 
 app.use(function(req,res,next) {
     res.locals.currentUser = req.user
     next()
 })
-
-
-
-
 
 
 app.listen(process.env.PORT, () => {
