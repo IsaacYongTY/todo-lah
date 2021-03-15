@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const User = require('../models/user.model')
+const mockData = require("../lib/mockData")
 
 router.get("/", (req, res) => {
     res.render("auth/signin")
@@ -7,6 +8,10 @@ router.get("/", (req, res) => {
 
 router.get("/register", (req, res) => {
     res.render("auth/signup")
+})
+
+router.get("/tasks", (req, res) => {
+    res.render("tasks/tasks", {mockData})
 })
 
 //Put this in other route, the default / is for signin currently
