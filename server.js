@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}))
 
 app.use(methodOverride('_method'))
 
-
+app.use("/", require("./routes/user.route"))
 
 app.listen(process.env.PORT, () => {
     console.log(`App is listening on ${process.env.PORT}`)
